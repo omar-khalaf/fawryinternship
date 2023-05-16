@@ -1,4 +1,4 @@
-# fawryinternship
+# Fawry internship
 ### Welcome to this README file! it represent our first session in our internship where, we discussed several important topics related to software development and deployment practices, including DevOps, deployment strategies, automation, orchestration, and cloud computing. Let's dive in!
 
 # 1. What are DevOps and DevOps Concepts?
