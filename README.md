@@ -21,3 +21,15 @@ Popular IaaS providers include:
 >> Amazon Web Services (AWS)
 >> Microsoft Azure
 >> Google Compute Engine (GCE), the IaaS component of Google Cloud Platform (GCP
+
+### What is DevOps orchestration?
+DevOps orchestration tames the complexity of DevOps toolchains by automatically managing workflows and dependencies in DevOps workflows.
+DevOps is a widely practiced set of procedures and tools for streamlining the development, release, and updating of software. In their most basic form, DevOps procedures can result in complicated processes, data silos, and fragmented responsibilities.
+### Automation versus orchestration
+Automation and orchestration are common terms; while closely related, they are distinct concepts.
+
+Automation refers to creating machine-executable processes to perform a task, such as deploying a virtual machine or performing a backup. Organizations may use automation to reduce the likelihood of errors, lighten the workload of staff, and control costs.
+
+Meanwhile, orchestration refers to coordinating the execution of multiple steps in a more complex workflow or pipeline. Orchestration leverages DevOps tools that allow for rapid updates and releases, version control, and other best practices for software engineering.
+### 
+
