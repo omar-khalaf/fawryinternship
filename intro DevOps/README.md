@@ -24,3 +24,5 @@ Cloud computing services are typically offered through three different models: I
 * Software as a Service (SaaS): In this model, the cloud provider offers fully hosted and managed software applications that users can access over the internet. Users typically pay a subscription fee based on usage, and the provider is responsible for maintaining and updating the application infrastructure and data.
 
 Each of these cloud computing models provides different levels of control and flexibility, and may be better suited for different use cases and business needs. For example, IaaS might be ideal for organizations that need more control over their infrastructure and want to run complex workloads, while SaaS might be a better fit for organizations that want to quickly adopt and use specific applications without investing in extensive hardware or software resources.
+
+![alt text](./IaaS-PaaS-SaaS.jpeg)
