@@ -25,4 +25,18 @@ Cloud computing services are typically offered through three different models: I
 
 Each of these cloud computing models provides different levels of control and flexibility, and may be better suited for different use cases and business needs. For example, IaaS might be ideal for organizations that need more control over their infrastructure and want to run complex workloads, while SaaS might be a better fit for organizations that want to quickly adopt and use specific applications without investing in extensive hardware or software resources.
 
-![alt text](./IaaS-PaaS-SaaS.jpeg)
+<p align="center">
+  <img src="./IaaS-PaaS-SaaS.jpeg" />
+</p>
+
+## What is the difference between automation, Iac and orchestration? 
+
+Automation, Infrastructure as Code (IaC), and orchestration are all important concepts in modern IT and software development. While they are related, they refer to different aspects of managing IT infrastructure and applications.
+
+* Automation: Automation refers to the process of using tools and scripts to automate repetitive or time-consuming tasks. In IT operations, automation is used to reduce manual effort, improve consistency, and increase reliability. For example, an IT operations team might use automation to automate server configuration, deployment, or monitoring tasks.
+
+* Infrastructure as Code (IaC): IaC is a methodology for managing IT infrastructure using code. Rather than manually configuring servers and other infrastructure components, IaC enables teams to define their infrastructure as code and use automation tools to provision and manage it. This approach helps ensure consistency, reduces errors, and enables more rapid and efficient infrastructure changes and deployments.
+
+* Orchestration: Orchestration refers to the process of coordinating and managing complex workflows or processes across multiple systems or applications. In IT operations, orchestration tools are used to automate and streamline workflows, such as application deployment or disaster recovery procedures. Orchestration tools typically provide a graphical interface for defining workflows, as well as APIs or command-line interfaces for integration with other automation tools.
+
+In summary, automation focuses on reducing manual effort through the use of scripts and tools and it requires a trigger forthe script to run; IaC is a mix between Iac and validation as it validate if the task in hand is already done or not. lastly Orchestration in addition to automation and validation it provides other functionallities like creating a newtork for pods so we can say Orchestration refers to managing multiple automated tasks to create a dynamic workflow.
