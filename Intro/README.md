@@ -42,6 +42,7 @@ Zero downtime deployment strategies are aimed at minimizing or eliminating servi
 - Infrastructure as Code (IaC): IaC is a practice of managing infrastructure resources through machine-readable configuration files. It allows for defining and provisioning resources such as servers, networks, and storage using code. IaC treats infrastructure as software, enabling version control, reproducibility, and the ability to automate the provisioning and management of infrastructure.
 
 - Orchestration: Orchestration refers to the coordination and management of multiple automated tasks or services to achieve a specific goal. In the context of DevOps, orchestration tools are used to automate and streamline complex workflows, integrating different components and services to work together harmoniously. Orchestration tools manage the sequencing, dependencies, and interactions between various automated tasks, ensuring efficient execution and coordination.
+
 To summarize, automation focuses on eliminating manual effort by automating repetitive tasks, IaC is about managing infrastructure through code, and orchestration involves coordinating and managing automated tasks and services.
 
 # 5. What is Cloud and What are Its Benefits?
