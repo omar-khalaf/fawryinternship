@@ -29,7 +29,7 @@ Overall, DevOps is about breaking down barriers and creating a collaborative, ag
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h4>So, What is the difference between Automation and Orchestration?</h4>
+<h2>So, What is the difference between Automation and Orchestration?</h2>
 
 Automation and orchestration are both important concepts in the context of DevOps and IT operations, but they serve different purposes.
 
@@ -41,7 +41,7 @@ In essence, automation is about automating individual tasks or processes, while 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h5>What is Cloud and how does it exist?</h5>
+<h2>What is Cloud and how does it exist?</h2>
 
 #Cloud refers to a network of remote servers that are used to store, manage, and process data and applications. Instead of running software or storing data on a local computer or server, users can access these resources through the internet from anywhere in the world.
 
@@ -55,7 +55,7 @@ Overall, the cloud makes it easier and more cost-effective for organizations to 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h6>Cloud Portability and Simplicity!</h6>
+<h2>Cloud Portability and Simplicity!</h2>
 
 Cloud portability and simplicity are two important concepts that are closely related to the use of cloud computing.
 
