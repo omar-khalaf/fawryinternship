@@ -1,7 +1,7 @@
 # Fawry DevOps Internship
 <h1>Intro</h1>
 
-#What is DevOps?
+<h2>What is DevOps?</h2>
 
 - DevOps is a set of practices and principles that aim to improve collaboration and communication between software development teams and IT operations teams. The goal of DevOps is to increase the speed and efficiency of software delivery by automating processes, breaking down silos, and fostering a culture of continuous improvement.
 
@@ -9,7 +9,7 @@
 
 - Some key practices and tools associated with DevOps include continuous integration and continuous deployment (CI/CD), infrastructure as code (IaC), monitoring and logging, and containerization and orchestration. By embracing DevOps, organizations can improve the quality, speed, and reliability of software delivery, while also increasing agility and reducing costs.
 
-#From a narrow perspective, DevOps focuses on some practices:
+<h3>From a narrow perspective, DevOps focuses on some practices:</h3>
 
 Culture: DevOps emphasizes a culture of collaboration, communication, and continuous improvement. Developers and operations teams work together to streamline processes and solve problems, rather than working in isolated silos.
 
@@ -29,7 +29,7 @@ Overall, DevOps is about breaking down barriers and creating a collaborative, ag
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#So, What is the difference between Automation and Orchestration?
+<h4>So, What is the difference between Automation and Orchestration?</h4>
 
 Automation and orchestration are both important concepts in the context of DevOps and IT operations, but they serve different purposes.
 
@@ -41,7 +41,7 @@ In essence, automation is about automating individual tasks or processes, while 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#What is the Cloud and how does it exist?
+<h5>What is the Cloud and how does it exist?</h5>
 
 The cloud refers to a network of remote servers that are used to store, manage, and process data and applications. Instead of running software or storing data on a local computer or server, users can access these resources through the internet from anywhere in the world.
 
@@ -55,7 +55,7 @@ Overall, the cloud makes it easier and more cost-effective for organizations to 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#Cloud Portability and Simplicity!
+<h6>Cloud Portability and Simplicity!</h6>
 
 Cloud portability and simplicity are two important concepts that are closely related to the use of cloud computing.
 
