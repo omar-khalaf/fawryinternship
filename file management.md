@@ -4,7 +4,7 @@
 
 
 
-![Logo](https://data-flair.training/blogs/wp-content/uploads/sites/2/2022/05/file-management-in-linux.webp)
+![Logo](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220304191804/10-Best-File-Managers-For-Linux.png)
 
 
 
