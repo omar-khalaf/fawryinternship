@@ -5,5 +5,5 @@ just be sure to give the file the right permissions
 sudo chmod u+x owncloud.sh
 ./owncloud
 ```
-and your good to go 🎉🎉🎉🎉🎉🎉
+and you're good to go 🎉🎉🎉🎉🎉🎉
 
