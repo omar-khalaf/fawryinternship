@@ -1,0 +1,16 @@
+Git reset:      it’s a command to reset the current branch to a specific commit.
+
+	reset soft: it will move the current branch pointer to the specific commit but it will leave the changes in the staging .  
+			Git reset --soft <commit-hash>
+	
+	reset mixed: it’s the same like the soft reset but it will not be staged to the next commit 
+			  Git reset --mixed<commit-hash>
+	
+	reset hard:  This option will move the current branch pointer to the specified commit and discard all changes in                                       
+	the staging area and working directory. This means that any changes since the specified commit will be permanently lost.
+			  git reset --hard<commit-hash>
+/* I would recommend that u take a backup or snapshot for work before using the git hard because it will delete the changes permentley */
+
+Git revert:      its command that undo a commit that was done from before without deleting commits or losing work, by   writing a new commit that do the opposite of a specific .
+                                  git revert <commit-hash>
+
