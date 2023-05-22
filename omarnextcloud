@@ -1,0 +1,46 @@
+/*This the how i installed nextcloud with manual backup*/
+/* not u may to make some cahnges so it can work on your machine */
+sudo apt update
+sudo apt upgrade
+sudo add-apt-repository ppa:ondrej/php /* i installed this version only of php because it works with nextcloud and my ubuntu works on php8.1.2-1ubuntu
+sudo apt install php8.1-mysqlnd  
+install mysql-client-core-8.0
+apt install mariadb-client-core-10.6 /* just because i want to */
+
+cd /var/www
+sudo wget https://download.nextcloud.com/server/releases/latest.tar.bz2
+sudo tar -xvf latest.tar.bz2
+
+sudo chown -R www-data:www-data /var/www/nextcloud
+sudo chmod -R 755 /var/www/nextcloud
+
+sudo nano /etc/apache2/sites-available/nextcloud.conf
+<VirtualHost *:por number>
+    ServerAdmin omar.com
+    DocumentRoot /var/www/nextcloud/
+    ServerName ip
+    ServerAlias www.ip
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    <Directory /var/www/nextcloud/>
+        Options +FollowSymlinks
+        AllowOverride All
+        Require all granted
+        Satisfy Any
+    </Directory>
+    <IfModule mod_dav.c>
+        Dav off
+    </IfModule>
+</VirtualHost>
+
+sudo a2ensite nextcloud.conf
+sudo systemctl restart apache2
+
+/* now we start to setup our manual backup */
+sudo rsync -av /var/www/nextcloud/data/ /path/to/backup/
+crontab -e
+0 0 * * * /path/to/backup_script.sh  /* u can change the backup timeimg to whatever u want */
+
+
+/* feel free to use the script */
+/* if u find any mistakes or u can do it in a better way pls let me know */
