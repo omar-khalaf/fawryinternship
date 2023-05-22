@@ -55,14 +55,15 @@ $ killall myapp
 ```
 ## different kinds of signals:-
 
-to send a signal to any process you must know two things the process ID we can get it from comands like **ps** and what kind of signal do you want to send, the following table show more about signals. 
+to send a signal to any process you must know two things the process ID we can get it from comands like **ps** and what kind of signal do you want to send, the following table show some famous signals. 
 
 <p align="center">
   <img src="./signal.png" />
 </p>
 so if we want to kill a signal pemenantly
+
 ```
-kill -9 PID
+$ kill -9 PID
 ```
 
 ## EXTRAS comming soon
