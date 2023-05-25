@@ -2,6 +2,7 @@ Linux questions:
 
 1- architecture of linux:
 		Its composed of 4 layers kernels system admin, system , hardware and shell utility 
+
 2-linux directory structure:
 		Its like a tree from and organization of files into a hierarchy of folders and the base of it is root.
 3-file management finding files and  directory:
