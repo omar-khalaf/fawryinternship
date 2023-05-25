@@ -1,0 +1,30 @@
+	DEVOPS TERMINOLOGY:
+	
+	1-Devops benefits: 
+			Faster development of software and quicker deliveries , our methodology is flexible and can be adaptive, improved communication between the teams, efficiency and quality is increased by the automation and the ci/cd process, costumer satisfaction in enhanced.
+	2- Continuous Integration :
+			automation integration of code changes into single build and test process, it lets the developers merge their code changes in a central repo that way automated built and test can be run.
+	3- continuous deployment:
+			It refers to automatic releasing of any developer changes from any repository to the production. This way we speed up the process.  (only failure in the test will stop this process).
+	4-continuous delivery:
+			It’s a extension of CI to make sure that the new changes can be released to the customer ASAP (it has the power to decide whether to make the releases daily weekly and ect..) .
+	5-microservices:
+			It’s a architecture that it can break down the application into a distinct services, which can be developed and deployed independently.
+	6-cloud computing 
+			It’s the delivery of computing services like storage database networking software analytic and intelligence. (benefits of it is the low coast, speed, productivity, performance reliability security).
+	7-infrastructure as service:(laas)
+			It’s a form of cloud computing that provides virtualized computing resources over the internet.
+	8-Platform as service:(paas)
+			It’s a cloud computing model that provides costumers a complete cloud platform hardware software and infrastructure for developing running and managing applications without the cost complexity and inflexibility that often comes with building and maintaining and platform on premises.
+	9-Software as service:(saas)
+			It allows users to connect to and use cloud-based apps over the internet.
+	10-Infrastructure as Code:(lac)
+			Managing and provisioning of infrastructure through code instead of through manual process.
+	
+	/* 10, 9, 8 AND 7 ARE METHODS OF CLOUD COMPUTING*/
+	
+	11-observability:
+			It refers to software tools that helps devs and ops teams to log, correlate, and analyze massive amount of data from distributed application and glean real-time insights.
+	
+	
+/*There is 3 pillars for observability which are  metrics traces and log*
