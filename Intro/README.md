@@ -24,8 +24,6 @@ Using the agile method, the code that works for the developer may not work for t
 ### 3- DevOps: 
 a methodology software development teams use to bring products to market more quickly and efficiently. It's a way of managing the entire software lifecycle from development through release, focusing on collaboration between developers and IT operations.
 
-![Screenshot](Devopslifecycle.jpg)
-
 ![Screenshot](transform-development-cycle.jpg)
 
 
