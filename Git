@@ -1,0 +1,46 @@
+Gitlab questions:
+
+1- what is git?
+		Git is a devops tool that is free and open source system.
+2- features of git:
+		Its compatible with all the OS.
+		Non linear development, lets the users to operate the project remotely.
+		Branches, git allows us to makes changes to the project without effecting the original version.
+		Its lightweight and takes a minimal storage.
+		Speed, its very fast to fetch from local repo instead doing it from the remote repo.
+		Its open source but its also secure because it keeps all the commits done on the local copy of the developer with all of that its still economical.
+3-git branching model:
+		Simply it let us pull the master branch to add or fix features or working with bugs and test it without effecting the master branch.
+4-git flow:
+		It’s a branching model of git, it isolate the new development from finished work, that’s makes parallel development easy, it only merge back the main body after the team lead accept  it.
+5-git merge and merge conflict:
+		If developer A tried to edit code that developer B is editing a conflict will occur, that why they work in separate branch, and then we can git merge command to combine the separated branches, to solve the conflict is the direct way by editing the file with the conflict, there is many commands that helps us to identify the conflict during any station of the conflict.
+6-git 
+		*Gitstash: it’s a temporaly change u made to your working copy so u can on something else and then come back and re-apply them again.
+		*ignoregit: it specify intentionally untracked files that git should ignore in its history.
+		*fork git: it lets u to create your own copy of a repo in a remote location
+		*index git: it’s a staging area that lets users commit new changes.
+		*remotegit: it lets create, view and delete to other repo
+		*upstream tag: it refer to the original branch or repo
+7-git squash: 
+		when we have many commits that we don't need we can combine them to one singe commit 
+8-merge and rebase:
+		Merge:  lets us merge git branches , also it shows us the history of commit merging 
+		Rebase: it allows us to integrate changes from one branches to another, also rebase logs are linear.
+****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+Git reset:      it’s a command to reset the current branch to a specific commit.
+
+	reset soft: it will move the current branch pointer to the specific commit but it will leave the changes in the staging .  
+			Git reset --soft <commit-hash>
+	
+	reset mixed: it’s the same like the soft reset but it will not be staged to the next commit 
+			  Git reset --mixed<commit-hash>
+	
+	reset hard:  This option will move the current branch pointer to the specified commit and discard all changes in                                       
+	the staging area and working directory. This means that any changes since the specified commit will be permanently lost.
+			  git reset --hard<commit-hash>
+/* I would recommend that u take a backup or snapshot for work before using the git hard because it will delete the changes permentley */
+
+Git revert:      its command that undo a commit that was done from before without deleting commits or losing work, by   writing a new commit that do the opposite of a specific .
+                                  git revert <commit-hash>
+
