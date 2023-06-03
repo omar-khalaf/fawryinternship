@@ -1,0 +1,120 @@
+Docker Questions:
+
+1- Containerization vs Virtualization:
+		Containerization:
+		Its a lightweight form of virtualization that allows multiple applications to run on the same operating system kernel, while maintaining isolation and independence from each other. Containers are created from images, which are pre-configured packages containing the application code, dependencies, and runtime environment. Containers share the host operating system's resources, such as CPU, memory, and network, while also providing a separate file system and process space for each container. Containerization is generally more resource-efficient than virtualization, as it eliminates the need for a separate operating system instance for each application.
+		Virtualization:
+		It provides a complete simulation of an operating system and hardware environment, allowing multiple operating systems and applications to run on the same physical machine. Each virtual machine (VM) runs its own operating system instance, which is isolated from the host operating system and other VMs. Virtualization requires a hypervisor, which is a software layer that provides the necessary abstraction and management of the VMs. Virtualization provides greater isolation and security than containerization, as each VM has its own set of resources and configuration settings.
+		
+2- what is docker?
+		It’s an open-source platform for building, sharing and running distributed applications, it allows the developer to package an application and its dependencies into a container, which can be deployed to any environment that supports docker .
+3- docker image vs docker container vs docker layer:
+		Image: it’s a package that’s lightweight, standalone and executable, it include everything needed to run an application from code, runtime, libraries and dependencies, we create it from docker file, it can be stored in a registry and in can be reused in different environment.
+		Container: its an instance of an image that’s run as a process, its lightweight and isolated which mean it has its own file system, network and runtime. We can run multiple container on the same host machine each one with its own resources and configuration.
+		Layer: its single read-only filesystem that the represent the change to the image we add new layer on top of the previous one to create a new version of the image.
+4- managing docker :
+		We can mange docker by docker cli or docker management tool.
+5- how to scale docker:
+		We can scale docker manually by stating or stopping container instances or by automation by using orchestration tools like docker swarm or k8s, which it can manage the deployment and scaling across multiple host automatically.
+6- what is docker compose?
+		It’s a tool that lets us run multiple containers at the same time, we can define it in a single yaml file, we use compose with complex application that consist of multi services like web application or data base, from there we can set each services configration from environment variables, network settings and volume mounts.
+7- Used docker to manage dependencies in python project:
+		First we create a requirement.txt file then we use docker file that’s installs dependencies using pip.
+8- docker file vs docker-compose file:
+		Docker file: its used to define the content and build instruction for a single docker image.
+		Compose-file: its used to define a set of services and there dependencies and it can mange multiple containers at the same time.
+9- Docker Engine:
+		(Docker daemon) it’s a lightweight runtime, it has many features like 
+		Containerization that allows dev to package there application into a container that can be run on machine. Image management, network, storage and security.
+10- Volume mount:
+		It’s a away to access and share data between docker container and the host machine. It allows containers to read and write to the host machine or other container without copying the data, its also good for data backup and recovery because the data is stored outside the container  
+**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+Interaction commands:
+docker start container	Starts a new container
+docker stop container	Stops a container
+docker pause container	Pauses a container
+docker unpause container	Unpauses a container
+docker restart container	Restarts a container
+docker wait container	Blocks a container
+docker export container	Exports container contents to a tar archive
+docker attach container	Attaches to a running container
+docker wait container	Waits until the container is terminated and shows the exit code
+docker commit -m “commit message” -a “author” container username/image_name: tag	Saves a running container as an image
+docker logs -ft container	Follows container logs
+docker exec -ti container script.sh	Runs a command in a container
+docker commit container image	Creates a new image from a container
+docker create image	Creates a new container from an image
+
+
+Build commands :
+docker build	Builds an image from a Dockerfile located in the current directory
+docker build https://github.com/docker/rootfs.git#container:docker	Builds an image from a remote GIT repository
+docker build -t imagename/tag	Builds and tags an image for easier tracking
+docker build https://yourserver/file.tar.gz	Builds an image from a remote tar archive
+docker build -t image:1.0 -<<EOFFROM busyboxRUN echo "hello world"EOF	Builds an image via a Dockerfile that is passed through STDIN
+
+
+Run commands:
+--detach , -d	Runs a container in the background and prints the container ID
+--env , -e	Sets environment variables
+--hostname , -h	Sets a hostname to a container
+--label , -l	Creates a meta data label for a container
+--name	Assigns a name to a container
+--network	Connects a container to a network
+--rm	Removes container when it stops
+--read-only	Sets the container filesystem as read-only
+--workdir , -w	Sets a working directory in a container
+
+Registry commands:
+docker login	Logs in to a registry
+docker logout	Logs out from a registry
+docker pull mysql	Pulls an image from a registry
+docker push repo/ rhel-httpd:latest	Pushes an image to a registry
+docker search term	Searches Docker Hub for images with the specified term
+
+Service commands:
+docker service ls	Lists all services running in a swarm
+docker stack services stackname	Lists all running services
+docker service ps servicename	Lists the tasks of a service
+docker service update servicename	Updates a service
+docker service create image	Creates a new service
+docker service scale servicename=10	Scales one or more replicated services
+docker service logs stackname servicename	Lists all service logs
+
+Network commands:
+docker network create networkname	Creates a new network
+docker network rm networkname	Removes a specified network
+docker network ls	Lists all networks
+docker network connect networkname container	Connects a container to a network
+docker network disconnect networkname container	Disconnects a container from a network
+docker network inspect networkname	Displays detailed information about a network
+
+Manage image commands:
+docker image ls	Lists images
+docker image rm mysql	Removes an image
+docker tag image tag	Tags an image
+docker history image	Displays the image history
+docker inspect image	Displays low-level information about an image
+
+Inspection commands:
+docker ps	Lists all running containers
+docker -ps -a	Lists all containers
+docker diff container	Inspects changes to directories and files in the container filesystem
+docker top container	Shows all running processes in an existing container
+docker inspect container	Displays low-level information about a container
+docker logs container	Gathers the logs for a container
+docker stats container	Shows container resource usage statistics
+
+Clean up commands:
+docker image prune	Clears an unused image
+docker image prune -a	Clears all images that are not being used by containers
+docker system prune	Removes all stopped containers, all networks not used by containers, all dangling images, and all build cache
+docker image rm image	Removes an image
+docker rm container	Removes a running container
+docker kill $ (docker ps -q)	Stops all running containers
+docker swarm leave	Leaves a swarm
+docker stack rm stackname	Removes a swarm
+docker volume rm $(docker volume ls -f dangling=true -q)	Removes all dangling volumes
+docker rm $(docker ps -a -q)	Removes all stopped containers
+docker kill $ (docker ps -q)	Stops all running containers
+
