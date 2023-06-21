@@ -1,0 +1,90 @@
+DevOps Interview Questions:
+
+• what’s EC2 Instance types?
+• What’s VPC?
+• what’s S3 bucket and types it?
+• Is there difference between SG and NACL?
+• What’s difference between Public Subnet and Private Subnet?
+• How can application access internet without received requests from internet?
+• Design Architecture for web application contain 3 tiers: Frontend, Backend and
+Database?
+• How can cost optimization your infrastructure?
+• What’s types of Database engine on AWS?
+• What’s difference between AWS Shield vs AWS WAF vs AWS Guard-Duty?
+• What’s difference between S3 vs EBS vs EFS?
+• It’s possible host an application on S3?
+• What’s SSM ?
+• What is the difference between Latency Based Routing and Geo DNS in
+Route53?
+• What is RTO and RPO in AWS?
+• What’s DevOps tools on AWS?
+• Docker Questions:
+• What’s difference between container vs VM?
+containers abstract application layer, vm abstract os
+• What’s Docker Image layers?
+• What’s difference between Entrypoint and CMD?
+entrypoint not overwrite , cmd overwrite with before actions
+• What’s multiple base images on Dockerfile?
+• What’s types of Docker volumes?
+bind volumes, tmpfs volumes
+• What’s types of Docker networks?
+bridge, overlay, host
+• What’s difference between COPY and ADD?
+• How can secure your Dockerfile?
+• What’s Stages of DevSecOps?
+• Linux Questions:
+• What’s difference between Reverse Proxy and Web Server?
+• How can optimize performance for Nginx?
+• How can list all processes?
+• How can list live processes?
+• How can check memory space?
+• How can check storage space?
+• What’s file management in Linux?
+• What’s LVM and how can using it?
+• How can mount volume in Linux?
+• What’s Linux boot strap processes?
+• Tell me about Linux file systems?
+• What’s WAF in Linux ?
+• What’s Selinux and how can using it?
+• What’s /dev/null directory?
+• Kubernetes Questions:
+• What’s Kubernetes architecture components and explain it?
+• What’s difference between Master and Worker Node?
+• What’s service types?
+• What’s difference between deployment vs daemonset vsStatfulset?
+• What’s difference between ReplicaController and ReplicaSet?
+• How can create variable for your deployment and how can secure it?
+• It’s possible to create more one container in one pod?
+• What’s Sidecar container?
+• wihat's CustomeResourcesDefination?
+• What’s kube-proxy?
+• What’s difference between liveness vs readiness vs startup probes?
+• What’s the operator of Database?
+• What’s the static pods?
+• What’s helm and helm charts?
+• What’s custom resources in K8s?
+• What’s difference between Ingress and IngressPolicy?
+• General Questions:
+• What’s CICD?
+• What’s Jenkins pipeline?
+• What’s Jenkins Master and Slave?
+• What’s Jenkins Shared Library?
+• What’s Java Spring Boot?
+• What’s difference between Rolling Strategy and Blue-Green Strategy?
+• What’s SonarQube?
+• What’s api?
+• How can writing bash script?
+• What’s difference between AWK vs SED?
+• How can create variables in ansible?
+• What’s modules and tasks in ansible playbook?
+• Difference between Dynamic Inventory and Multiple Inventory?
+• What’s path of ansible configuration?
+• What’s difference between ansible and chef?
+• What’s privilege escalation in ansible?
+• What’s Azure Devops?
+• What’s Git froking?
+• What’s difference between statefull vs stateless?
+• What’s message broker?
+• What’s CDN?
+• what's types of api?
+• What’s the terraform state
