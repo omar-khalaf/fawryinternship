@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  frontend:
+    build: ./frontend
+    restart: always
+    ports:
+      - "8081:80"
+    networks:
+      - my-network
+    container_name: frontend
+
+  proxy:
+    build: ./Rproxy
+    restart: always
+    ports:
+      - "8082:80"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
