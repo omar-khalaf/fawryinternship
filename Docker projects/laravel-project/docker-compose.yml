@@ -1,0 +1,65 @@
+version: "3.8"
+services:
+
+    database:
+        image: mysql:8.0
+        ports:
+            -   3306:3306
+        environment:
+            - MYSQL_DATABASE=${DB_DATABASE}
+            - MYSQL_USER=${DB_USERNAME}
+            - MYSQL_PASSWORD=${DB_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+        volumes:
+            - ./db-data:/var/lib/mysql
+
+    redis:
+        image: redis:alpine
+        command: redis-server --appendonly yes --requirepass  "${REDIS_PASSWORD}"
+        ports:
+            - 6379:6379
+
+
+
+    node:
+        build:
+            context: .
+            target: node
+        volumes:
+            - .:/usr/src
+            - ./node_modules:/usr/src/node_modules
+        tty: true
+
+    mailhog:
+      image: mailhog/mailhog:latest
+      ports:
+        - "1025:1025"
+        - "8025:8025"
+
+    php:
+        build: 
+            context: .
+            target: php
+            args:
+                - APP_ENV=${APP_ENV}
+         
+        environment:
+            - APP_ENV=${APP_ENV}
+        volumes:
+            - .:/app
+        ports:
+            - 8000:8000
+        depends_on:
+            - database
+            - redis
+
+
+
+volumes:
+    db-data: ~
+
+
+
+
+
+
