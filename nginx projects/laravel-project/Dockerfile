@@ -1,38 +1,34 @@
-FROM php:8.1 as php
+FROM php:8.1-fpm as php
 
-RUN apt-get update -y
-RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev
-RUN docker-php-ext-install pdo pdo_mysql bcmath
+# Install dependencies.
+RUN apt-get update && apt-get install -y unzip libpq-dev libcurl4-gnutls-dev nginx libonig-dev
 
-RUN pecl install -o -f redis \
-    && rm -rf /tmp/pear \
-    && docker-php-ext-enable redis
-
-
-WORKDIR /var/www
-COPY . .
-
-RUN mv .env.example .env
+# Install PHP extensions.
+RUN docker-php-ext-install mysqli pdo pdo_mysql bcmath curl opcache mbstring
 
 ADD https://getcomposer.org/download/2.3.5/composer.phar /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
 
 
-RUN composer install
+COPY ./php.ini /usr/local/etc/php/php.ini
+COPY ./php-fpm.conf /usr/local/etc/php-fpm.d/www.conf
+COPY ./nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 8000
-
-ENTRYPOINT ["php", "artisan", "serve", "--host=0.0.0.0"]
-
-# ==============================================================================
-
-#  node
-FROM node:14-alpine as node
 
 WORKDIR /var/www
-COPY . .
 
-RUN npm install --global cross-env
-RUN npm install
+# Copy files from current folder to container current folder (set in workdir).
+COPY --chown=www-data:www-data . .
 
-VOLUME /var/www/node_modules
+# Fix files ownership.
+RUN chown -R www-data /var/www/storage
+RUN chown -R www-data /var/www/bootstrap/cache
+
+RUN chmod -R 755 /var/www/storage
+RUN chmod -R 755 /var/www/bootstrap/cache
+
+# Adjust user permission & group
+RUN usermod --uid 1000 www-data
+RUN groupmod --gid 1001 www-data
+
+ENTRYPOINT [ "./entrypoint.sh" ]
