@@ -32,3 +32,6 @@ Here are some key features of PHP OPcache:
  * *php.ini* is the file where it contain the configration to opcache.
  * *php-fpm.conf* is file for fast cgi configration.
  * *nginx.conf* here nginx configration and uses fast cgi an up stream server.
+ * both Dockerfie and compose are normal for laravel containerization with the exception of:-
+    1. the docker file is rootless and is run by **www-data**.
+    2. the image used is **php8.1-fpm** which helps us implement fastCGI and integrate nginx easly.
